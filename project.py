@@ -1,3 +1,4 @@
+import turtle
 def get_colour_choice():
     colour1 = "розовый"
     colour2 = "голубой"
@@ -42,5 +43,23 @@ def get_num_hexagon():
                 print("Оно должно быть от 4 до 20. Попробуйте еще раз.")
         else:
             print("Введено не число. Попробуйте еще раз.")
+
+def draw_hexagon(x, y, side_len, color):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.fillcolor(color)
+    turtle.begin_fill()
+    turtle.right(90)
+    for _ in range(6):
+        turtle.forward(side_len)
+        turtle.right(60)
+    turtle.end_fill()
+
+turtle.speed(1)
+draw_hexagon(0, 0, 100, "red")
+turtle.done()
+
+
 
 get_colour_choice()
