@@ -14,26 +14,24 @@ def get_colour_choice():
     print("*",colour5)
     print("*",colour6)
     while True:
-        selected_colour = input("Пожалуйста,введите цвет:")
+        selected_colour = input("Пожалуйста, введите первый цвет:")
         if selected_colour.lower() == colour1 or selected_colour.lower() == colour2 or selected_colour.lower() == colour3 or selected_colour.lower() == colour4 or selected_colour.lower() == colour5 or selected_colour.lower() == colour6:
-            print("Первый цвет выбран,", selected_colour)
-            break
-        else:
+            return selected_colour
+    else:
             print(selected_colour, "не является верным значением")
 
     while True:
-        selected_colour2 = input("Пожалуйста,введите цвет:")
+        selected_colour2 = input("Пожалуйста,введите второй цвет:")
         if selected_colour2.lower() == colour1 or selected_colour2.lower() == colour2 or selected_colour2.lower() == colour3 or selected_colour2.lower() == colour4 or selected_colour2.lower() == colour5 or selected_colour2.lower() == colour6:
             if selected_colour2 != selected_colour:
-                print("Второй цвет выбран,", selected_colour2)
-                break
+                return selected_colour2
         else:
             print(selected_colour2, "не является верным значением")
 
 
 def get_num_hexagon():
     while True:
-        input_number = input("Пожалуйста, введите количество шестиугольников, располагаемых в ряд:")
+        input_number = input("Пожалуйста, введите количество шестиугольников, располагаемых в ряд: ")
         if input_number.isdigit():
             number = int(input_number)
             if 4 <= number <= 20:
@@ -56,10 +54,9 @@ def draw_hexagon(x, y, side_len, color):
         turtle.right(60)
     turtle.end_fill()
 
-turtle.speed(1)
-draw_hexagon(0, 0, 100, "red")
+turtle.speed(10)
+draw_hexagon(0, 0, 100, "black" )
 turtle.done()
 
-
-
 get_colour_choice()
+get_num_hexagon()
