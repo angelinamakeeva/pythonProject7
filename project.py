@@ -1,4 +1,9 @@
 import turtle
+
+screen = turtle.Screen()
+screen.setup(500, 500)
+screen.bgcolor('white')
+
 def get_colour_choice():
     colour1 = "розовый"
     colour2 = "голубой"
