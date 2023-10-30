@@ -84,3 +84,6 @@ for row in range(number_hexagons):
         x -= (math.sqrt(3 * side_len * side_len)) / 2
     else:
         x += (math.sqrt(3 * side_len * side_len)) / 2
+
+turtle.speed(100)
+turtle.mainloop()
