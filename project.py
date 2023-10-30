@@ -1,6 +1,6 @@
 #Osokina Anastasya 85%
 #Kareva Alena 95%
-#Makeeva Angelina 
+#Makeeva Angelina 70%
 
 import turtle
 import math
