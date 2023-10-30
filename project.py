@@ -76,4 +76,8 @@ y -= little_diagonal / 2
 
 for row in range(number_hexagons):
     for columns in range(number_hexagons):
+        if (row + columns) % 2 == 0:
+            draw_hexagon(x + columns * (math.sqrt(3 * side_len * side_len)), y - row * (side_len * 1.5), side_len, color1)
+        else:
+            draw_hexagon(x + columns * (math.sqrt(3 * side_len * side_len)), y - row * (side_len * 1.5), side_len, color2)
 
