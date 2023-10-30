@@ -2,52 +2,53 @@
 #Kareva Alena 95%
 #Makeeva Angelina 70%
 
+import ru_local as ru
 import turtle
 import math
 
 def get_colour_choice():
-    color = ['розовый', 'голубой', 'синий', 'фиолетовый', 'желтый', 'зеленый']
+    color = ru.LST_COLOR
     while True:
-        print('Допустимые цвета заливки: розовый, голубой, синий, фиолетовый, желтый, зеленый')
-        select_color_1 = input('Пожалуйста, введите цвет: ')
+        print(ru.VR_COLOR)
+        select_color_1 = input(ru.PLS_COLOR)
         if select_color_1 in color:
-            print('Первый вет выбран: ', select_color_1)
+            print(ru.FIRST_COLOR, select_color_1)
             break
         else:
-            print(select_color_1, "не является верным значением")
+            print(select_color_1, ru.NOT_VALUE)
 
     while True:
-        print('Допустимые цвета заливки: розовый, голубой, синий, фиолетовый, желтый, зеленый')
-        select_color_2 = input('Пожалуйста, введите цвет: ')
+        print(ru.VR_COLOR)
+        select_color_2 = input(ru.PLS_COLOR)
         if select_color_2 in color:
-            print('Второй цвет выбран: ', select_color_2)
+            print(ru.SECOND_COLOR, select_color_2)
             break
         else:
-            print(select_color_2, "не является верным значением")
+            print(select_color_2, ru.NOT_VALUE)
     
     dictionary = {
-        'розовый' : 'pink',
-        'голубой' : 'cyan',
-        'синий' : 'blue',
-        'фиолетовый' : 'purple',
-        'желтый' : 'yellow',
-        'зеленый' : 'green'
+        ru.PINK : 'pink',
+        ru.CYAN : 'cyan',
+        ru.BLUE : 'blue',
+        ru.PURPLE : 'purple',
+        ru.YELLOW : 'yellow',
+        ru.GREEN : 'green'
     }
 
     return dictionary[select_color_1], dictionary[select_color_2]
 
 def get_num_hexagon():
     while True:
-        input_number = input("Пожалуйста, введите количество шестиугольников, располагаемых в ряд:")
+        input_number = input(ru.PLS_NUM)
         if input_number.isdigit():
             number = int(input_number)
             if 4 <= number <= 20:
-                print("Число принято: ", number)
+                print(ru.NUM, number)
                 break
             else:
-                print("Оно должно быть от 4 до 20. Попробуйте еще раз.")
+                print(ru.EXSEPT)
         else:
-            print("Введено не число. Попробуйте еще раз.")
+            print(ru.NOT_INT)
     return input_number
 
 
