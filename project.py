@@ -1,47 +1,51 @@
 import turtle
+import math
 
 def get_colour_choice():
-    colour1 = "розовый"
-    colour2 = "голубой"
-    colour3 = "синий"
-    colour4 = "фиолетовый"
-    colour5 = "желтый"
-    colour6 = "зеленый"
-    print("Допустимые цвета заливки:")
-    print("*",colour1)
-    print("*",colour2)
-    print("*",colour3)
-    print("*",colour4)
-    print("*",colour5)
-    print("*",colour6)
+    color = ['розовый', 'голубой', 'синий', 'фиолетовый', 'желтый', 'зеленый']
     while True:
-        selected_colour = input("Пожалуйста, введите первый цвет:")
-        if selected_colour.lower() == colour1 or selected_colour.lower() == colour2 or selected_colour.lower() == colour3 or selected_colour.lower() == colour4 or selected_colour.lower() == colour5 or selected_colour.lower() == colour6:
-            return selected_colour
-    else:
-            print(selected_colour, "не является верным значением")
-
-    while True:
-        selected_colour2 = input("Пожалуйста,введите второй цвет:")
-        if selected_colour2.lower() == colour1 or selected_colour2.lower() == colour2 or selected_colour2.lower() == colour3 or selected_colour2.lower() == colour4 or selected_colour2.lower() == colour5 or selected_colour2.lower() == colour6:
-            if selected_colour2 != selected_colour:
-                return selected_colour2
+        print('Допустимые цвета заливки: розовый, голубой, синий, фиолетовый, желтый, зеленый')
+        select_color_1 = input('Пожалуйста, введите цвет: ')
+        if select_color_1 in color:
+            print('Первый вет выбран: ', select_color_1)
+            break
         else:
-            print(selected_colour2, "не является верным значением")
+            print(select_color_1, "не является верным значением")
 
+    while True:
+        print('Допустимые цвета заливки: розовый, голубой, синий, фиолетовый, желтый, зеленый')
+        select_color_2 = input('Пожалуйста, введите цвет: ')
+        if select_color_2 in color:
+            print('Второй цвет выбран: ', select_color_2)
+            break
+        else:
+            print(select_color_2, "не является верным значением")
+    
+    dictionary = {
+        'розовый' : 'pink',
+        'голубой' : 'cyan',
+        'синий' : 'blue',
+        'фиолетовый' : 'purple',
+        'желтый' : 'yellow',
+        'зеленый' : 'green'
+    }
+
+    return dictionary[select_color_1], dictionary[select_color_2]
 
 def get_num_hexagon():
     while True:
-        input_number = input("Пожалуйста, введите количество шестиугольников, располагаемых в ряд: ")
+        input_number = input("Пожалуйста, введите количество шестиугольников, располагаемых в ряд:")
         if input_number.isdigit():
             number = int(input_number)
             if 4 <= number <= 20:
-                print("Число принято:", number)
+                print("Число принято: ", number)
                 break
             else:
                 print("Оно должно быть от 4 до 20. Попробуйте еще раз.")
         else:
             print("Введено не число. Попробуйте еще раз.")
+    return input_number
+
 
 def draw_hexagon(x, y, side_len, color):
     turtle.penup()
