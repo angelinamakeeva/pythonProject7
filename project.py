@@ -61,6 +61,7 @@ def draw_hexagon(x, y, side_len, color):
     for _ in range(6):
         turtle.forward(side_len)
         turtle.right(60)
+    turtle.left(90)
     turtle.end_fill()
 
 turtle.speed(10)
