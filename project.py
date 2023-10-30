@@ -1,5 +1,5 @@
 #Osokina Anastasya 85%
-#Kareva Alena 
+#Kareva Alena 95%
 #Makeeva Angelina 
 
 import turtle
