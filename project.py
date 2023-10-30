@@ -1,3 +1,7 @@
+#Osokina Anastasya 85%
+#Kareva Alena 
+#Makeeva Angelina 
+
 import turtle
 import math
 
@@ -65,3 +69,6 @@ turtle.done()
 
 get_colour_choice()
 get_num_hexagon()
+
+color1, color2 = get_colour_choice()
+n = int(get_num_hexagon())
