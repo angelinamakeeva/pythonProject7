@@ -74,5 +74,6 @@ side_len = little_diagonal / 3 ** 0.5
 x += side_len / 2
 y -= little_diagonal / 2
 
-
+for row in range(number_hexagons):
+    for columns in range(number_hexagons):
 
