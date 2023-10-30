@@ -64,12 +64,15 @@ def draw_hexagon(x, y, side_len, color):
     turtle.left(90)
     turtle.end_fill()
 
-turtle.speed(10)
-draw_hexagon(0, 0, 100, "black" )
-turtle.done()
-
-get_colour_choice()
-get_num_hexagon()
-
 color1, color2 = get_colour_choice()
-n = int(get_num_hexagon())
+number_hexagons = int(get_num_hexagon())
+
+x = -250
+y = 250
+little_diagonal = 500 // number_hexagons
+side_len = little_diagonal / 3 ** 0.5
+x += side_len / 2
+y -= little_diagonal / 2
+
+
+
